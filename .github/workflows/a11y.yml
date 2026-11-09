@@ -1,0 +1,14 @@
+﻿name: A11y Resolver Review
+on:
+  pull_request:
+    types: [opened, synchronize]
+  push:
+    branches: [ main ]
+
+jobs:
+  a11y-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run A11y Resolver
+        run: echo "El bot de A11y Resolver debería ejecutarse aquí"
