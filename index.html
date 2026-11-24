@@ -1,9 +1,53 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-<head><title>Test E4</title></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Auto Review - A11y Studio</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .card { border: 1px solid #ccc; padding: 15px; margin-bottom: 15px; border-radius: 8px; }
+        img { max-width: 100px; }
+    </style>
+</head>
 <body>
-    <h1>Prueba de Auto Review</h1>
-    <button></button>
+
+    <h1>Bienvenido a la prueba de A11y Studio</h1>
+    
+    <div class="card">
+        <h2>Sobre esta página</h2>
+        <p>Esta es una página de prueba diseñada para verificar que el A11yDetector puede analizar correctamente un sitio con suficiente contenido visible. Contiene varios párrafos, encabezados de diferentes niveles y algunos elementos interactivos.</p>
+        <p>El objetivo es que el escáner encuentre los errores de accesibilidad que hemos colocado intencionadamente y que el Resolver (Solver) pueda generar las correcciones oportunas.</p>
+    </div>
+
+    <div class="card">
+        <h2>Galería de imágenes</h2>
+        <p>A continuación se muestran algunas imágenes. Una de ellas no tiene texto alternativo (alt) intencionadamente.</p>
+        <!-- Imagen correcta -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/June_odd-eyed-cat.jpg/320px-June_odd-eyed-cat.jpg" alt="Un gato de ojos pares">
+        <!-- Imagen con error (sin alt) -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Circle-icons-document.svg/240px-Circle-icons-document.svg.png">
+    </div>
+
+    <div class="card">
+        <h2>Acciones</h2>
+        <p>Prueba a hacer clic en los siguientes botones:</p>
+        <!-- Botón correcto -->
+        <button>Botón accesible</button>
+        
+        <!-- BOTÓN CON ERROR: Vacío y sin aria-label -->
+        <button></button>
+    </div>
+
+    <div class="card">
+        <h2>Más contenido para el escáner</h2>
+        <p>El detector requiere que la página tenga un número mínimo de caracteres visibles. Por eso, añadimos este texto extra. La accesibilidad web es fundamental para que todas las personas puedan navegar por internet sin barreras.</p>
+        <ul>
+            <li>Elemento de lista uno</li>
+            <li>Elemento de lista dos</li>
+            <li>Elemento de lista tres</li>
+        </ul>
+    </div>
+
 </body>
 </html>
-<p>Comprobación final E4</p>
